@@ -14,8 +14,7 @@ module.exports.run = async (bot, message, args) => {
     message.member.removeRole(yuriRole.id);
     message.member.removeRole(natsukiRole.id);
 
-    message.delete().catch(O_o=>{});
-    bestGirlChannel.bulkDelete("chose");
+    message.delete().catch();
     message.channel.send(`${message.author} chose Monika`);
 }
 
