@@ -26,8 +26,8 @@ module.exports.run = async (bot, message, args) => {
     let helpEmbed = new Discord.RichEmbed()
     .setDescription("List of commands\n`[required]` `(optional)`")
     .setColor("ffb2dc")
-    .setFooter(`Page ${page} of ${totalPages}. Type "${prefixes[message.guild.id].prefixes}help [page]" to view a new page.`)
-    .addField("Prefix", prefixes[message.guild.id].prefixes)
+    .setFooter(`Page ${page} of ${totalPages}. Type "${botconfig.prefix}help [page]" to view a new page.`)
+    .addField("Prefix", botconfig.prefix)
     
     var i = page * perPage - perPage;
     while (i < Math.min(page * perPage, cmds.length)) {
