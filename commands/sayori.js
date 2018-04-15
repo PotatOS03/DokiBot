@@ -20,6 +20,5 @@ module.exports.run = async (bot, message, args) => {
 
 module.exports.help = {
     name: "sayori",
-    desc: "Join team Sayori",
-    usage: ""
+    desc: "Join team Sayori"
 }

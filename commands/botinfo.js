@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
     .setThumbnail(bIcon)
     .addField("Bot Name", bot.user.username)
     .addField("Created On", bot.user.createdAt)
-    .addField("Created By", "PotatOS03#0263")
+    .addField("Created By", "<@286664522083729409>")
     .addField("Servers", bot.guilds.size);
 
     return message.channel.send(botEmbed);
@@ -16,6 +16,5 @@ module.exports.run = async (bot, message, args) => {
 
 module.exports.help = {
     name: "botinfo",
-    desc: "Get information about the bot",
-    usage: ""
+    desc: "Get information about the bot"
 }

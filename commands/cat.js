@@ -14,11 +14,11 @@ module.exports.run = async (bot, message, args) => {
         message.channel.send(catEmbed);
     } catch(e) {
         message.channel.send("Please try again!").then(msg => msg.delete(5000));
+        console.log(e);
     }
 }
 
 module.exports.help = {
     name: "cat",
-    desc: "Generate a random cat photo or gif",
-    usage: ""
+    desc: "Generate a random cat photo or gif"
 }

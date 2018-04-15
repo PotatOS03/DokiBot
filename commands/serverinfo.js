@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
     
     let serverEmbed = new Discord.RichEmbed()
     .setDescription("Server Information")
-    .setColor("f04747")
+    .setColor("ffb2dc")
     .setThumbnail(sIcon)
     .addField("Server Name", message.guild.name)
     .addField("Created On", message.guild.createdAt)
@@ -17,6 +17,5 @@ module.exports.run = async (bot, message, args) => {
 
 module.exports.help = {
     name: "serverinfo",
-    desc: "Get information about the server",
-    usage: ""
+    desc: "Get information about the server"
 }
