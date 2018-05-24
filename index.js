@@ -27,7 +27,7 @@ fs.readdir("./commands", (err, files) => {
 
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online in ${bot.guilds.size} servers!`);
-  bot.user.setActivity(`${botconfig.prefix}help`, "WATCHING");
+  bot.user.setActivity(`DDLC | d/help`);
 });
 
 bot.on("guildMemberAdd", async member => {
@@ -53,6 +53,15 @@ bot.on("message", async message => {
 
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if (commandfile) commandfile.run(bot, message, args);
+  if (message.content.startsWith(`${prefix}eval`)) {
+    if (message.author.id !== "286664522083729409") return;
+    let code = args.slice(0).join(" ");
+    try {
+      await eval(code);
+    } catch(e) {
+      message.channel.send("`" + e.toString() + "`");
+    }
+  }
 });
 
 bot.login(process.env.BOT_TOKEN);
